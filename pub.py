@@ -68,6 +68,7 @@ try:
     for i in range(0, 10):
         msg = "test" + str(i)
         client.publish(topic, msg, qos=qos)
+        time.sleep(0.5)
 except BaseException as e:
     client.loop_stop()
     client.disconnect()
